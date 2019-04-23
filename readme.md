@@ -1,11 +1,8 @@
-A simple React + Redux implementation
+A simple React + Redux implementation : Mini Instagram type app 
+Credits to wesbos for the redux tutorial. It has been extended within this app.
 
 ## Running
 
 First `npm install` to grab all the necessary dependencies. 
 
 Then run `npm start` and open <localhost:4001> in your browser.
-
-## Production Build
-
-Run `npm build` to create a distro folder and a bundle.js file.
