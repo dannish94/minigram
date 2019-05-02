@@ -1,14 +1,23 @@
-import React from 'react'
-import { Link } from 'react-router';
+import React from "react";
+import Photo from "./Photo";
+import Comments from './Comments'
+// import { Link } from 'react-router';
 
 const Single = React.createClass({
-    render() {
-        return (
-  <div className="single-photo">
-      SINGLE
-  </div>
-        )
-    }
+  render() {
+    const { postId } = this.props.params;
+    const i = this.props.posts.findIndex(
+        (posts) => posts.code === postId);
+    const post = this.props.posts[i]
+    const postComments = this.props.comments[postId] || [];
+
+    return (
+    <div className="single-photo">
+        <Photo i={i} post={post} {...this.props}/>
+    <Comments postComments={postComments}/>
+    </div>
+    )
+  }
 });
 
 export default Single;
